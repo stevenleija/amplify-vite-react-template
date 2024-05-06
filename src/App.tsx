@@ -28,8 +28,8 @@ function App() {
 
         <Authenticator>
             { ({
-                signOut,
-                user
+                signOut
+                // user
             }) => (
                 <main>
                     <h1>My todos</h1>
