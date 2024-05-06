@@ -11,28 +11,26 @@
     },
     "dependencies": {
         "aws-amplify": "^6.2.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "@aws-amplify/backend": "^1.0.0",
         "@aws-amplify/backend-cli": "^1.0.1",
-        "@aws-amplify/ui-react": "^6.1.9",
-        "@types/react": "^18.3.1",
-        "@types/react-dom": "^18.3.0",
-        "@typescript-eslint/eslint-plugin": "^7.8.0",
-        "@typescript-eslint/parser": "^7.8.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
         "@vitejs/plugin-react": "^4.2.1",
-        "aws-cdk": "^2.140.0",
-        "aws-cdk-lib": "^2.140.0",
+    "aws-cdk": "^2.138.0",
+    "aws-cdk-lib": "^2.138.0",
         "constructs": "^10.3.0",
         "esbuild": "^0.20.2",
-        "eslint": "^9.2.0",
-        "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.6",
-        "tsx": "^4.9.3",
+    "tsx": "^4.7.2",
         "typescript": "^5.4.5",
-        "vite": "^5.2.11"
-    },
-    "packageManager": "yarn@4.2.1"
+    "vite": "^5.2.0"
+  }
 }
