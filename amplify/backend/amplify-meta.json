@@ -1,15 +1,59 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-mfademo-staging-2d7be-authRole",
-      "UnauthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-staging-2d7be-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-staging-2d7be-authRole",
+      "AuthRoleName": "amplify-mfademo-dev-cd1d5-authRole",
+      "UnauthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-dev-cd1d5-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-dev-cd1d5-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
-      "UnauthRoleName": "amplify-mfademo-staging-2d7be-unauthRole",
-      "StackName": "amplify-mfademo-staging-2d7be",
-      "StackId": "arn:aws:cloudformation:us-east-1:184944340258:stack/amplify-mfademo-staging-2d7be/cc0736d0-0d59-11ef-9e7d-0afff6b8aba1",
-      "AmplifyAppId": "djwsohokvymj0"
+      "DeploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+      "UnauthRoleName": "amplify-mfademo-dev-cd1d5-unauthRole",
+      "StackName": "amplify-mfademo-dev-cd1d5",
+      "StackId": "arn:aws:cloudformation:us-east-1:184944340258:stack/amplify-mfademo-dev-cd1d5/e1714af0-0e22-11ef-b574-0afff160aef9",
+      "AmplifyAppId": "dspvsx59t8i0j"
+    }
+  },
+  "analytics": {
+    "mfademo": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsmfademo"
+      },
+      "lastPushTimeStamp": "2024-05-09T16:45:42.722Z",
+      "output": {
+        "appName": "mfademo-dev",
+        "Region": "us-east-1",
+        "Id": "66506d3d40f049e0a62e7ebbe47d5fa4"
+      },
+      "lastPushDirHash": "HroR2CPiIGPgtZnxVulfshEQMzc="
+    }
+  },
+  "api": {
+    "mfademo": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "pp53irvimvalnftndymq24q7eq",
+        "GraphQLAPIEndpointOutput": "https://wvr3vmrbkrgijdznupfak7shey.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-np4l7zkpd5cjrmceildefkuw3m"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apimfademo"
+      },
+      "lastPushTimeStamp": "2024-05-09T16:45:42.485Z",
+      "lastPushDirHash": "eNjnfdS59/zS8V6E5CVVjZ0RhEc="
     }
   },
   "auth": {
@@ -45,131 +89,84 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito",
-      "output": {
-        "UserPoolId": "us-east-1_dcoRXfUpp",
-        "AppClientIDWeb": "47l18d45s6madj2nnn2231o06d",
-        "AppClientID": "638e9j38urv0ntkubiskesic4u",
-        "IdentityPoolId": "us-east-1:965d5f03-946e-4cd7-b7d5-2e7df2a06192",
-        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:184944340258:userpool/us-east-1_dcoRXfUpp",
-        "IdentityPoolName": "testAuthIdentityPool__staging",
-        "UserPoolName": "mfademo"
-      },
-      "lastPushTimeStamp": "2024-05-08T18:28:51.171Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/auth/mfademo-cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/auth/mfademo-cloudformation-template.json",
         "logicalId": "authmfademo"
       },
+      "lastPushTimeStamp": "2024-05-09T16:45:42.485Z",
+      "output": {
+        "UserPoolId": "us-east-1_TYtU5KfRW",
+        "AppClientIDWeb": "e6qs65qd8aiom07hbgmtqi6h",
+        "AppClientID": "2qq7pqbmhcv89vkke76lrnvj7k",
+        "IdentityPoolId": "us-east-1:546c9627-1caf-4f3f-a764-4a77eda01145",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:184944340258:userpool/us-east-1_TYtU5KfRW",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "mfademo"
+      },
       "lastPushDirHash": "d97JVijRFKCslRDXoyxwleFjcxg="
-    }
-  },
-  "api": {
-    "mfademo": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": []
-        },
-        "GraphQLAPIIdOutput": "4wab5e4khreabhdnsguzag4kpa",
-        "GraphQLAPIEndpointOutput": "https://ae7mccx4ffcl7ivzob5azj2gn4.appsync-api.us-east-1.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-qrozkp7s3nbd3kbixmfjfqxo3i"
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apimfademo"
-      },
-      "lastPushTimeStamp": "2024-05-08T18:28:48.205Z",
-      "lastPushDirHash": "eNjnfdS59/zS8V6E5CVVjZ0RhEc="
-    }
-  },
-  "analytics": {
-    "mfademo": {
-      "service": "Pinpoint",
-      "providerPlugin": "awscloudformation",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
-        "logicalId": "analyticsmfademo"
-      },
-      "lastPushTimeStamp": "2024-05-08T18:28:52.281Z",
-      "output": {
-        "appName": "mfademo-staging",
-        "Region": "us-east-1",
-        "Id": "a53ab95b569d4a998bf661bba39f246b"
-      },
-      "lastPushDirHash": "HroR2CPiIGPgtZnxVulfshEQMzc="
-    }
-  },
-  "notifications": {
-    "mfademo": {
-      "ResourceName": "mfademo",
-      "Name": "mfademo-staging",
-      "service": "Pinpoint",
-      "Region": "us-east-1",
-      "output": {
-        "Region": "us-east-1",
-        "Name": "mfademo-staging",
-        "InAppMessaging": {
-          "Enabled": true,
-          "Name": "mfademo-staging",
-          "ApplicationId": "a53ab95b569d4a998bf661bba39f246b"
-        },
-        "Id": "a53ab95b569d4a998bf661bba39f246b",
-        "regulatedResourceName": "mfademo",
-        "region": "us-east-1"
-      },
-      "lastPushTimeStamp": "2024-05-08T18:22:14.473Z",
-      "Id": "a53ab95b569d4a998bf661bba39f246b"
     }
   },
   "function": {
     "mfaUploadDocument": {
       "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
       "dependsOn": [
         {
-          "category": "auth",
-          "resourceName": "mfademo",
           "attributes": [
             "UserPoolId"
-          ]
+          ],
+          "category": "auth",
+          "resourceName": "mfademo"
         },
         {
-          "category": "api",
-          "resourceName": "mfademo",
           "attributes": [
             "GraphQLAPIIdOutput"
-          ]
+          ],
+          "category": "api",
+          "resourceName": "mfademo"
         }
       ],
-      "lastBuildTimeStamp": "2024-05-08T18:26:36.749Z",
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2024-05-09T16:42:16.131Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2024-05-08T18:26:36.797Z",
+      "lastPackageTimeStamp": "2024-05-09T16:42:16.157Z",
       "distZipFilename": "mfaUploadDocument-65476564337570454446-build.zip",
       "s3Bucket": {
-        "deploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
+        "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
         "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/function/mfaUploadDocument-cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/function/mfaUploadDocument-cloudformation-template.json",
         "logicalId": "functionmfaUploadDocument"
       },
-      "lastPushTimeStamp": "2024-05-08T18:28:51.171Z",
+      "lastPushTimeStamp": "2024-05-09T16:45:42.485Z",
       "output": {
-        "LambdaExecutionRoleArn": "arn:aws:iam::184944340258:role/mfademoLambdaRolef1dcc6d3-staging",
+        "LambdaExecutionRoleArn": "arn:aws:iam::184944340258:role/mfademoLambdaRolef1dcc6d3-dev",
         "Region": "us-east-1",
-        "Arn": "arn:aws:lambda:us-east-1:184944340258:function:mfaUploadDocument-staging",
-        "Name": "mfaUploadDocument-staging",
-        "LambdaExecutionRole": "mfademoLambdaRolef1dcc6d3-staging"
+        "Arn": "arn:aws:lambda:us-east-1:184944340258:function:mfaUploadDocument-dev",
+        "Name": "mfaUploadDocument-dev",
+        "LambdaExecutionRole": "mfademoLambdaRolef1dcc6d3-dev"
       },
       "lastPushDirHash": "8b1XTy6ykRn+DdT5dMGhdRGQ5Xw="
+    }
+  },
+  "notifications": {
+    "mfademo": {
+      "channels": [
+        "InAppMessaging"
+      ],
+      "service": "Pinpoint",
+      "output": {
+        "Region": "us-east-1",
+        "Name": "mfademo-dev",
+        "Id": "66506d3d40f049e0a62e7ebbe47d5fa4",
+        "regulatedResourceName": "mfademo",
+        "region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2024-05-09T16:41:18.252Z",
+      "Name": "mfademo-dev",
+      "Id": "66506d3d40f049e0a62e7ebbe47d5fa4",
+      "Region": "us-east-1"
     }
   }
 }

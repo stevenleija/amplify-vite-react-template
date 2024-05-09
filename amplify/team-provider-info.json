@@ -38,7 +38,52 @@
           "envvar1": "TESTING",
           "deploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
           "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
+        },
+        "mfademo": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mfademo-dev-cd1d5-authRole",
+      "UnauthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-dev-cd1d5-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-dev-cd1d5-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+      "UnauthRoleName": "amplify-mfademo-dev-cd1d5-unauthRole",
+      "StackName": "amplify-mfademo-dev-cd1d5",
+      "StackId": "arn:aws:cloudformation:us-east-1:184944340258:stack/amplify-mfademo-dev-cd1d5/e1714af0-0e22-11ef-b574-0afff160aef9",
+      "AmplifyAppId": "dspvsx59t8i0j"
+    },
+    "categories": {
+      "auth": {
+        "mfademo": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "mfademo-dev",
+          "Id": "66506d3d40f049e0a62e7ebbe47d5fa4",
+          "Region": "us-east-1"
         }
+      },
+      "analytics": {
+        "Pinpoint": {
+          "Name": "mfademo-dev",
+          "Id": "66506d3d40f049e0a62e7ebbe47d5fa4",
+          "Region": "us-east-1"
+        },
+        "mfademo": {}
+      },
+      "function": {
+        "mfaUploadDocument": {
+          "envvar1": "TESTING",
+          "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+          "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
+        },
+        "mfademo": {}
+      },
+      "api": {
+        "mfademo": {}
       }
     }
   }
