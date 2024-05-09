@@ -28,4 +28,5 @@ dist-ssr
 amplify_outputs*
 amplifyconfiguration*
 /src/aws-exports.js
-!/src/ui-components/
+/src/ui-components/*
+/src/graphql/*
