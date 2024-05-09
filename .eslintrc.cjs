@@ -1,5 +1,3 @@
-// @ts-check
-
 module.exports = {
     root: true,
     env: {
@@ -11,7 +9,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:react-hooks/recommended'
     ],
-    ignorePatterns: ['dist', '.eslintrc.js'],
+    ignorePatterns: ['dist', '.eslintrc.cjs'],
     parser: '@typescript-eslint/parser',
     plugins: ['react-refresh'],
     rules: {
