@@ -30,3 +30,5 @@ amplifyconfiguration*
 /src/aws-exports.js
 /src/ui-components/*
 /src/graphql/*
+/amplify/#current-cloud-backend/*
+/amplify/.config/*

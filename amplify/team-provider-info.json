@@ -1,0 +1,45 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mfademo-staging-2d7be-authRole",
+      "UnauthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-staging-2d7be-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-staging-2d7be-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
+      "UnauthRoleName": "amplify-mfademo-staging-2d7be-unauthRole",
+      "StackName": "amplify-mfademo-staging-2d7be",
+      "StackId": "arn:aws:cloudformation:us-east-1:184944340258:stack/amplify-mfademo-staging-2d7be/cc0736d0-0d59-11ef-9e7d-0afff6b8aba1",
+      "AmplifyAppId": "djwsohokvymj0"
+    },
+    "categories": {
+      "auth": {
+        "mfademo": {}
+      },
+      "api": {
+        "mfademo": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "mfademo-staging",
+          "Id": "a53ab95b569d4a998bf661bba39f246b",
+          "Region": "us-east-1"
+        }
+      },
+      "analytics": {
+        "Pinpoint": {
+          "Name": "mfademo-staging",
+          "Id": "a53ab95b569d4a998bf661bba39f246b",
+          "Region": "us-east-1"
+        },
+        "mfademo": {}
+      },
+      "function": {
+        "mfaUploadDocument": {
+          "envvar1": "TESTING",
+          "deploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
+          "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
+        }
+      }
+    }
+  }
+}

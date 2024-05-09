@@ -1,0 +1,175 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mfademo-staging-2d7be-authRole",
+      "UnauthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-staging-2d7be-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::184944340258:role/amplify-mfademo-staging-2d7be-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
+      "UnauthRoleName": "amplify-mfademo-staging-2d7be-unauthRole",
+      "StackName": "amplify-mfademo-staging-2d7be",
+      "StackId": "arn:aws:cloudformation:us-east-1:184944340258:stack/amplify-mfademo-staging-2d7be/cc0736d0-0d59-11ef-9e7d-0afff6b8aba1",
+      "AmplifyAppId": "djwsohokvymj0"
+    }
+  },
+  "auth": {
+    "mfademo": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "ON",
+        "mfaTypes": [
+          "TOTP"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [
+          "GIVEN_NAME",
+          "FAMILY_NAME",
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-1_dcoRXfUpp",
+        "AppClientIDWeb": "47l18d45s6madj2nnn2231o06d",
+        "AppClientID": "638e9j38urv0ntkubiskesic4u",
+        "IdentityPoolId": "us-east-1:965d5f03-946e-4cd7-b7d5-2e7df2a06192",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:184944340258:userpool/us-east-1_dcoRXfUpp",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "mfademo"
+      },
+      "lastPushTimeStamp": "2024-05-08T18:28:51.171Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/auth/mfademo-cloudformation-template.json",
+        "logicalId": "authmfademo"
+      },
+      "lastPushDirHash": "d97JVijRFKCslRDXoyxwleFjcxg="
+    }
+  },
+  "api": {
+    "mfademo": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "4wab5e4khreabhdnsguzag4kpa",
+        "GraphQLAPIEndpointOutput": "https://ae7mccx4ffcl7ivzob5azj2gn4.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-qrozkp7s3nbd3kbixmfjfqxo3i"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apimfademo"
+      },
+      "lastPushTimeStamp": "2024-05-08T18:28:48.205Z",
+      "lastPushDirHash": "eNjnfdS59/zS8V6E5CVVjZ0RhEc="
+    }
+  },
+  "analytics": {
+    "mfademo": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsmfademo"
+      },
+      "lastPushTimeStamp": "2024-05-08T18:28:52.281Z",
+      "output": {
+        "appName": "mfademo-staging",
+        "Region": "us-east-1",
+        "Id": "a53ab95b569d4a998bf661bba39f246b"
+      },
+      "lastPushDirHash": "HroR2CPiIGPgtZnxVulfshEQMzc="
+    }
+  },
+  "notifications": {
+    "mfademo": {
+      "ResourceName": "mfademo",
+      "Name": "mfademo-staging",
+      "service": "Pinpoint",
+      "Region": "us-east-1",
+      "output": {
+        "Region": "us-east-1",
+        "Name": "mfademo-staging",
+        "InAppMessaging": {
+          "Enabled": true,
+          "Name": "mfademo-staging",
+          "ApplicationId": "a53ab95b569d4a998bf661bba39f246b"
+        },
+        "Id": "a53ab95b569d4a998bf661bba39f246b",
+        "regulatedResourceName": "mfademo",
+        "region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2024-05-08T18:22:14.473Z",
+      "Id": "a53ab95b569d4a998bf661bba39f246b"
+    }
+  },
+  "function": {
+    "mfaUploadDocument": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "mfademo",
+          "attributes": [
+            "UserPoolId"
+          ]
+        },
+        {
+          "category": "api",
+          "resourceName": "mfademo",
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ]
+        }
+      ],
+      "lastBuildTimeStamp": "2024-05-08T18:26:36.749Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2024-05-08T18:26:36.797Z",
+      "distZipFilename": "mfaUploadDocument-65476564337570454446-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-mfademo-staging-2d7be-deployment",
+        "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-staging-2d7be-deployment/amplify-cfn-templates/function/mfaUploadDocument-cloudformation-template.json",
+        "logicalId": "functionmfaUploadDocument"
+      },
+      "lastPushTimeStamp": "2024-05-08T18:28:51.171Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::184944340258:role/mfademoLambdaRolef1dcc6d3-staging",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:184944340258:function:mfaUploadDocument-staging",
+        "Name": "mfaUploadDocument-staging",
+        "LambdaExecutionRole": "mfademoLambdaRolef1dcc6d3-staging"
+      },
+      "lastPushDirHash": "8b1XTy6ykRn+DdT5dMGhdRGQ5Xw="
+    }
+  }
+}
