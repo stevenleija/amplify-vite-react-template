@@ -5,6 +5,8 @@ backend:
             commands:
                 - echo "AWS_BRANCH_ID => $AWS_BRANCH"
                 - echo "AWS_APP_ID => $AWS_APP_ID"
+                - corepack enable
+                - nvm install 20.10
                 - yarn
                 - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
