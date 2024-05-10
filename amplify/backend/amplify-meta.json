@@ -21,7 +21,7 @@
         "Region": "us-east-1",
         "Id": "66506d3d40f049e0a62e7ebbe47d5fa4"
       },
-      "lastPushTimeStamp": "2024-05-10T19:12:00.448Z",
+      "lastPushTimeStamp": "2024-05-10T19:49:32.449Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
         "logicalId": "analyticsmfademo"
@@ -52,7 +52,7 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2024-05-10T19:12:00.453Z",
+      "lastPushTimeStamp": "2024-05-10T19:49:32.452Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apimfademo"
@@ -102,7 +102,7 @@
         "IdentityPoolName": "testAuthIdentityPool__dev",
         "UserPoolName": "mfademo"
       },
-      "lastPushTimeStamp": "2024-05-10T19:12:00.455Z",
+      "lastPushTimeStamp": "2024-05-10T19:49:32.453Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/auth/mfademo-cloudformation-template.json",
         "logicalId": "authmfademo"
@@ -137,7 +137,7 @@
         "Name": "mfaUploadDocument-dev",
         "LambdaExecutionRole": "mfademoLambdaRolef1dcc6d3-dev"
       },
-      "lastPushTimeStamp": "2024-05-10T19:12:00.457Z",
+      "lastPushTimeStamp": "2024-05-10T19:49:32.454Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/function/mfaUploadDocument-cloudformation-template.json",
         "logicalId": "functionmfaUploadDocument"
@@ -163,7 +163,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/function/MFASMSSender-cloudformation-template.json",
         "logicalId": "functionMFASMSSender"
       },
-      "lastPushTimeStamp": "2024-05-10T19:12:00.951Z",
+      "lastPushTimeStamp": "2024-05-10T19:49:32.455Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::184944340258:role/mfademoLambdaRole5f2b1e52-dev",
         "Region": "us-east-1",
@@ -203,7 +203,7 @@
         "BucketName": "mfademo-storage-7dd2d50dcd1d5-dev",
         "Region": "us-east-1"
       },
-      "lastPushTimeStamp": "2024-05-10T19:12:00.461Z",
+      "lastPushTimeStamp": "2024-05-10T19:49:33.532Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-mfademo-dev-cd1d5-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storages3mfademostorage7dd2d50d"
