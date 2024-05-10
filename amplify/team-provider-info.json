@@ -84,6 +84,9 @@
       },
       "api": {
         "mfademo": {}
+      },
+      "storage": {
+        "s3mfademostorage7dd2d50d": {}
       }
     }
   }
