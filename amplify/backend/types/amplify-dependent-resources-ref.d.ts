@@ -25,6 +25,13 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
+    "MFASMSSender": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
     "mfaUploadDocument": {
       "Arn": "string",
       "LambdaExecutionRole": "string",

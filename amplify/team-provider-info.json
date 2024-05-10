@@ -80,7 +80,11 @@
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
           "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
         },
-        "mfademo": {}
+        "mfademo": {},
+        "MFASMSSender": {
+          "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+          "s3Key": "amplify-builds/MFASMSSender-59396f7071336e6f6855-build.zip"
+        }
       },
       "api": {
         "mfademo": {}

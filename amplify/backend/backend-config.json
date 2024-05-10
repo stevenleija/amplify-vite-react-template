@@ -64,6 +64,11 @@
     }
   },
   "function": {
+    "MFASMSSender": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "mfaUploadDocument": {
       "build": true,
       "dependsOn": [
@@ -116,6 +121,22 @@
         {
           "category": "analytics",
           "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
         }
       ]
     },
