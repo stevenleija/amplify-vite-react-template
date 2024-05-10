@@ -5,7 +5,7 @@ backend:
             commands:
                 - echo "*********** preBuild backend ***********"
                 - corepack enable
-#                - nvm install 20.10
+                - nvm install 20.10
                 - yarn
         build:
             commands:
