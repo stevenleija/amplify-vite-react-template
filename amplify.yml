@@ -3,7 +3,7 @@ backend:
     phases:
         preBuild:
             commands:
-                - echo "*********** preBuild backend ***********"
+                - echo "****A******* preBuild backend ***********"
                 - corepack enable
                 - nvm install 20.10
                 - yarn

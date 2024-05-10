@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3mfademostorage7dd2d50d",
+  "bucketName": "mfademo-storage-7dd2d50d",
+  "policyUUID": "3e6f2b84",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

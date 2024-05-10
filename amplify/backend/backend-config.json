@@ -162,5 +162,12 @@
         }
       ]
     }
+  },
+  "storage": {
+    "s3mfademostorage7dd2d50d": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
   }
 }
