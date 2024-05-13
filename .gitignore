@@ -32,3 +32,5 @@ amplifyconfiguration*
 /src/graphql/*
 /amplify/#current-cloud-backend/*
 /amplify/.config/*
+
+/amplify/backend/function/MFASMSSender/src/index.js
