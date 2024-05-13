@@ -37,7 +37,6 @@ try {
 }
 
 const secret = response.SecretString;*/
-// Your code goes here
 
 export const handler = async (
     event: APIGatewayProxyEvent
@@ -46,7 +45,7 @@ export const handler = async (
 
     try {
         let plainTextCode: string | Buffer;
-        const {
+        /*const {
             encrypt,
             decrypt
         } = encryptionSdk.buildClient(encryptionSdk.CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT);
@@ -72,7 +71,7 @@ export const handler = async (
             } = await decrypt(keyring, b64.toByteArray(code));
             plainTextCode = plaintext;
         }
-        // PlainTextCode now has the decrypted secret.
+        // PlainTextCode now has the decrypted secret.*/
 
         // @ts-ignore
         const { triggerSource } = event;
