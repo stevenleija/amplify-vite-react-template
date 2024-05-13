@@ -57,7 +57,9 @@ exports.handler = async (event) => {
         console.log('CustomEmailSender_AccountTakeOverNotification: ' + plainTextCode);
     }
 
-    return {
+    return;
+
+    /*return {
         statusCode: 200,
         //  Uncomment below to enable CORS requests
         //  headers: {
@@ -65,5 +67,5 @@ exports.handler = async (event) => {
         //      "Access-Control-Allow-Headers": "*"
         //  },
         body: JSON.stringify('***** Hello from MFA SMS Custom Sender Lambda *****')
-    };
+    };*/
 };
