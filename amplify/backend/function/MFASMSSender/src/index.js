@@ -12,13 +12,16 @@ exports.handler = async (event) => {
     console.log(`EVENT: ${ JSON.stringify(event) }`);
 
     let plainTextCode;
-    // Configure the encryption SDK client with the KMS key from the environment variables.
+// Configure the encryption SDK client with the KMS key from the environment variables.
     const {
         encrypt,
         decrypt
     } = encryptionSdk.buildClient(encryptionSdk.CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT);
     const generatorKeyId = process.env.KEY_ALIAS;
     const keyIds = [process.env.KEY_ARN];
+    console.log(generatorKeyId);
+    console.log(keyIds);
+
     const keyring = new encryptionSdk.KmsKeyringNode({
         generatorKeyId,
         keyIds
@@ -57,7 +60,7 @@ exports.handler = async (event) => {
         console.log('CustomEmailSender_AccountTakeOverNotification: ' + plainTextCode);
     }
 
-    return;
+    return {};
 
     /*return {
         statusCode: 200,

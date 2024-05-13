@@ -78,12 +78,12 @@
         "mfaUploadDocument": {
           "envvar1": "TESTING",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
-          "s3Key": "amplify-builds/mfaUploadDocument-65476564337570454446-build.zip"
+          "s3Key": "amplify-builds/mfaUploadDocument-5a7476484f724a346b2b-build.zip"
         },
         "mfademo": {},
         "MFASMSSender": {
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
-          "s3Key": "amplify-builds/MFASMSSender-59396f7071336e6f6855-build.zip"
+          "s3Key": "amplify-builds/MFASMSSender-7462794b7a5332662f64-build.zip"
         }
       },
       "api": {

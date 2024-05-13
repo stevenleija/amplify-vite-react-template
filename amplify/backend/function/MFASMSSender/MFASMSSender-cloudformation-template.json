@@ -69,7 +69,9 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
-            }
+            },
+            "KEY_ALIAS": "68b78b8f-b3f8-46d1-9252-7d9475dfa28c",
+            "KEY_ARN": "arn:aws:kms:us-east-1:184944340258:key/68b78b8f-b3f8-46d1-9252-7d9475dfa28c"
           }
         },
         "Role": {
