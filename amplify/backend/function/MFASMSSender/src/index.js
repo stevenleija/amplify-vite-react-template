@@ -1,30 +1,27 @@
-/**
- * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
- */
-
-
 const AWS = require('aws-sdk');
 const b64 = require('base64-js');
 const encryptionSdk = require('@aws-crypto/client-node');
 
-// Configure the encryption SDK client with the KMS key from the environment variables.
-
-const {
-    encrypt,
-    decrypt
-} = encryptionSdk.buildClient(encryptionSdk.CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT);
-const generatorKeyId = process.env.KEY_ALIAS;
-const keyIds = [process.env.KEY_ARN];
-const keyring = new encryptionSdk.KmsKeyringNode({
-    generatorKeyId,
-    keyIds
-})
-
 // https://repost.aws/knowledge-center/cognito-custom-email-sender-trigger
 // aws kms create-key --description "KMS Key for CustomEmailSender" --region us-east-1
 
+/**
+ * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
+ */
 exports.handler = async (event) => {
     console.log(`EVENT: ${ JSON.stringify(event) }`);
+
+// Configure the encryption SDK client with the KMS key from the environment variables.
+    const {
+        encrypt,
+        decrypt
+    } = encryptionSdk.buildClient(encryptionSdk.CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT);
+    const generatorKeyId = process.env.KEY_ALIAS;
+    const keyIds = [process.env.KEY_ARN];
+    const keyring = new encryptionSdk.KmsKeyringNode({
+        generatorKeyId,
+        keyIds
+    })
 
     // Decrypt the secret code using encryption SDK.
     let plainTextCode;
@@ -35,7 +32,6 @@ exports.handler = async (event) => {
         } = await decrypt(keyring, b64.toByteArray(event.request.code));
         plainTextCode = plaintext
     }
-
     // PlainTextCode now has the decrypted secret.
 
     if (event.triggerSource === 'CustomEmailSender_SignUp') {
