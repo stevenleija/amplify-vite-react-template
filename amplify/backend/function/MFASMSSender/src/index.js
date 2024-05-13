@@ -40,27 +40,27 @@ exports.handler = async (event) => {
     const { triggerSource } = event;
     console.log(triggerSource);
 
-    if (triggerSource === 'CustomEmailSender_SignUp') {
+    if (triggerSource === 'CustomMessage_SignUp') {
         // Send email to end-user using custom or 3rd party provider.
         // Include temporary password in the email.
-        console.log('CustomEmailSender_SignUp: ' + plainTextCode);
-    } else if (triggerSource === 'CustomEmailSender_ResendCode') {
-        console.log('CustomEmailSender_ResendCode: ' + plainTextCode);
+        console.log('CustomMessage_SignUp: ' + plainTextCode);
+    } else if (triggerSource === 'CustomMessage_ResendCode') {
+        console.log('CustomMessage_ResendCode: ' + plainTextCode);
 
-    } else if (triggerSource === 'CustomEmailSender_ForgotPassword') {
-        console.log('CustomEmailSender_ForgotPassword: ' + plainTextCode);
+    } else if (triggerSource === 'CustomMessage_ForgotPassword') {
+        console.log('CustomMessage_ForgotPassword: ' + plainTextCode);
 
-    } else if (triggerSource === 'CustomEmailSender_UpdateUserAttribute') {
-        console.log('CustomEmailSender_UpdateUserAttribute: ' + plainTextCode);
+    } else if (triggerSource === 'CustomMessage_UpdateUserAttribute') {
+        console.log('CustomMessage_UpdateUserAttribute: ' + plainTextCode);
 
-    } else if (triggerSource === 'CustomEmailSender_VerifyUserAttribute') {
-        console.log('CustomEmailSender_VerifyUserAttribute: ' + plainTextCode);
+    } else if (triggerSource === 'CustomMessage_VerifyUserAttribute') {
+        console.log('CustomMessage_VerifyUserAttribute: ' + plainTextCode);
 
-    } else if (triggerSource === 'CustomEmailSender_AdminCreateUser') {
-        console.log('CustomEmailSender_AdminCreateUser: ' + plainTextCode);
+    } else if (triggerSource === 'CustomMessage_AdminCreateUser') {
+        console.log('CustomMessage_AdminCreateUser: ' + plainTextCode);
 
-    } else if (triggerSource === 'CustomEmailSender_AccountTakeOverNotification') {
-        console.log('CustomEmailSender_AccountTakeOverNotification: ' + plainTextCode);
+    } else if (triggerSource === 'CustomMessage_AccountTakeOverNotification') {
+        console.log('CustomMessage_AccountTakeOverNotification: ' + plainTextCode);
     }
 
     return {};
