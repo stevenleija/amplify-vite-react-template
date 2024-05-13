@@ -78,17 +78,21 @@
         "mfaUploadDocument": {
           "envvar1": "TESTING",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
-          "s3Key": "amplify-builds/mfaUploadDocument-5a7476484f724a346b2b-build.zip"
+          "s3Key": "amplify-builds/mfaUploadDocument-4c474e5a4632324c7a31-build.zip"
         },
         "mfademo": {},
         "MFASMSSender": {
+          "keyAlias": "TBD",
+          "keyArn": "TBD",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
-          "s3Key": "amplify-builds/MFASMSSender-7462794b7a5332662f64-build.zip"
+          "s3Key": "amplify-builds/MFASMSSender-55677835584168547638-build.zip"
         },
         "MFAAuthenticationPostAuth": {
           "keyAlias": "TBD",
           "keyArn": "TBD",
-          "secretsPathAmplifyAppId": "dspvsx59t8i0j"
+          "secretsPathAmplifyAppId": "dspvsx59t8i0j",
+          "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+          "s3Key": "amplify-builds/MFAAuthenticationPostAuth-55724c50566353306942-build.zip"
         }
       },
       "api": {

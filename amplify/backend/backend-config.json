@@ -130,6 +130,14 @@
         }
       ]
     },
+    "AMPLIFY_function_MFAAuthenticationPostAuth_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFAAuthenticationPostAuth"
+        }
+      ]
+    },
     "AMPLIFY_function_MFAAuthenticationPostAuth_keyAlias": {
       "usedBy": [
         {
@@ -146,6 +154,14 @@
         }
       ]
     },
+    "AMPLIFY_function_MFAAuthenticationPostAuth_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFAAuthenticationPostAuth"
+        }
+      ]
+    },
     "AMPLIFY_function_MFAAuthenticationPostAuth_secretsPathAmplifyAppId": {
       "usedBy": [
         {
@@ -155,6 +171,22 @@
       ]
     },
     "AMPLIFY_function_MFASMSSender_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_keyAlias": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_keyArn": {
       "usedBy": [
         {
           "category": "function",

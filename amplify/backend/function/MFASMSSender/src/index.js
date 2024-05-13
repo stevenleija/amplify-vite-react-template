@@ -6,6 +6,9 @@ const encryptionSdk = require('@aws-crypto/client-node');
 // aws kms create-key --description "KMS Key for CustomEmailSender" --region us-east-1
 // Secret name: dev/mfa/keyalias
 
+// "KEY_ALIAS": "68b78b8f-b3f8-46d1-9252-7d9475dfa28c",
+// "KEY_ARN": "arn:aws:kms:us-east-1:184944340258:key/68b78b8f-b3f8-46d1-9252-7d9475dfa28c"
+
 // Use this code snippet in your app.
 // If you need more information about configurations or implementing the sample code, visit the AWS docs:
 // https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started.html
