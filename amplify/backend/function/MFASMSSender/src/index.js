@@ -11,8 +11,9 @@ const encryptionSdk = require('@aws-crypto/client-node');
 exports.handler = async (event) => {
     console.log(`EVENT: ${ JSON.stringify(event) }`);
 
+    let plainTextCode;
 // Configure the encryption SDK client with the KMS key from the environment variables.
-    const {
+    /*const {
         encrypt,
         decrypt
     } = encryptionSdk.buildClient(encryptionSdk.CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT);
@@ -24,14 +25,13 @@ exports.handler = async (event) => {
     })
 
     // Decrypt the secret code using encryption SDK.
-    let plainTextCode;
     if (event.request.code) {
         const {
             plaintext,
             messageHeader
         } = await decrypt(keyring, b64.toByteArray(event.request.code));
         plainTextCode = plaintext
-    }
+    }*/
     // PlainTextCode now has the decrypted secret.
 
     if (event.triggerSource === 'CustomEmailSender_SignUp') {
