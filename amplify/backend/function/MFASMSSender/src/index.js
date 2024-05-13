@@ -17,46 +17,49 @@ exports.handler = async (event) => {
         encrypt,
         decrypt
     } = encryptionSdk.buildClient(encryptionSdk.CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT);
-    const generatorKeyId = process.env.KEY_ALIAS;
-    const keyIds = [process.env.KEY_ARN];
-    console.log(generatorKeyId);
-    console.log(keyIds);
 
-    const keyring = new encryptionSdk.KmsKeyringNode({
-        generatorKeyId,
-        keyIds
-    })
+    const generatorKeyId = process.env.KEY_ALIAS;
+    console.log(`generatorKeyId => ${ generatorKeyId }`);
+    const keyIds = [process.env.KEY_ARN];
+    console.log(`keyIds => ${ keyIds }`);
 
     // Decrypt the secret code using encryption SDK.
     if (event.request.code) {
+        const keyring = new encryptionSdk.KmsKeyringNode({
+            generatorKeyId,
+            keyIds
+        })
         const {
             plaintext,
             messageHeader
         } = await decrypt(keyring, b64.toByteArray(event.request.code));
-        plainTextCode = plaintext
+        plainTextCode = plaintext;
     }
     // PlainTextCode now has the decrypted secret.
 
-    if (event.triggerSource === 'CustomEmailSender_SignUp') {
+    const { triggerSource } = event;
+    console.log(triggerSource);
+
+    if (triggerSource === 'CustomEmailSender_SignUp') {
         // Send email to end-user using custom or 3rd party provider.
         // Include temporary password in the email.
         console.log('CustomEmailSender_SignUp: ' + plainTextCode);
-    } else if (event.triggerSource === 'CustomEmailSender_ResendCode') {
+    } else if (triggerSource === 'CustomEmailSender_ResendCode') {
         console.log('CustomEmailSender_ResendCode: ' + plainTextCode);
 
-    } else if (event.triggerSource === 'CustomEmailSender_ForgotPassword') {
+    } else if (triggerSource === 'CustomEmailSender_ForgotPassword') {
         console.log('CustomEmailSender_ForgotPassword: ' + plainTextCode);
 
-    } else if (event.triggerSource === 'CustomEmailSender_UpdateUserAttribute') {
+    } else if (triggerSource === 'CustomEmailSender_UpdateUserAttribute') {
         console.log('CustomEmailSender_UpdateUserAttribute: ' + plainTextCode);
 
-    } else if (event.triggerSource === 'CustomEmailSender_VerifyUserAttribute') {
+    } else if (triggerSource === 'CustomEmailSender_VerifyUserAttribute') {
         console.log('CustomEmailSender_VerifyUserAttribute: ' + plainTextCode);
 
-    } else if (event.triggerSource === 'CustomEmailSender_AdminCreateUser') {
+    } else if (triggerSource === 'CustomEmailSender_AdminCreateUser') {
         console.log('CustomEmailSender_AdminCreateUser: ' + plainTextCode);
 
-    } else if (event.triggerSource === 'CustomEmailSender_AccountTakeOverNotification') {
+    } else if (triggerSource === 'CustomEmailSender_AccountTakeOverNotification') {
         console.log('CustomEmailSender_AccountTakeOverNotification: ' + plainTextCode);
     }
 
