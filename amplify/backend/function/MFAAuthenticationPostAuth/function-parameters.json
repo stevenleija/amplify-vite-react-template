@@ -1,0 +1,16 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "keyAlias",
+      "environmentVariableName": "KEY_ALIAS"
+    },
+    {
+      "cloudFormationParameterName": "keyArn",
+      "environmentVariableName": "KEY_ARN"
+    }
+  ],
+  "secretNames": [
+    "dev_mfa_demo"
+  ]
+}

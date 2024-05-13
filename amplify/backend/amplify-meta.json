@@ -179,6 +179,12 @@
         "s3Key": "amplify-builds/mfaUploadDocument-5a7476484f724a346b2b-build.zip"
       },
       "lastPushDirHash": "ULPdJL2IOQ5clPEWaDo+rRhS3SU="
+    },
+    "MFAAuthenticationPostAuth": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
     }
   },
   "notifications": {

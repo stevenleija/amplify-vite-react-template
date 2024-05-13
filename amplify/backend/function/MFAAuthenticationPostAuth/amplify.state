@@ -4,6 +4,6 @@
   "useLegacyBuild": true,
   "defaultEditorFile": "src/index.js",
   "scripts": {
-    "build": "yarn install --no-bin-links --production"
+    "build": "yarn --no-bin-links --production"
   }
 }

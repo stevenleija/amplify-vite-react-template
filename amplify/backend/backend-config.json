@@ -64,6 +64,12 @@
     }
   },
   "function": {
+    "MFAAuthenticationPostAuth": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "MFASMSSender": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -121,6 +127,30 @@
         {
           "category": "analytics",
           "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFAAuthenticationPostAuth_keyAlias": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFAAuthenticationPostAuth"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFAAuthenticationPostAuth_keyArn": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFAAuthenticationPostAuth"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFAAuthenticationPostAuth_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFAAuthenticationPostAuth"
         }
       ]
     },

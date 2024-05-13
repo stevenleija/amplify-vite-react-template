@@ -84,6 +84,11 @@
         "MFASMSSender": {
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
           "s3Key": "amplify-builds/MFASMSSender-7462794b7a5332662f64-build.zip"
+        },
+        "MFAAuthenticationPostAuth": {
+          "keyAlias": "TBD",
+          "keyArn": "TBD",
+          "secretsPathAmplifyAppId": "dspvsx59t8i0j"
         }
       },
       "api": {
