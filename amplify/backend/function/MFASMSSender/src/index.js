@@ -20,6 +20,9 @@ const keyring = new encryptionSdk.KmsKeyringNode({
     keyIds
 })
 
+// https://repost.aws/knowledge-center/cognito-custom-email-sender-trigger
+// aws kms create-key --description "KMS Key for CustomEmailSender" --region us-east-1
+
 exports.handler = async (event) => {
     console.log(`EVENT: ${ JSON.stringify(event) }`);
 
