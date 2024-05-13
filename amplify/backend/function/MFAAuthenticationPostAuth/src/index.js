@@ -24,6 +24,11 @@ Amplify Params - DO NOT EDIT */
  */
 exports.handler = async (event) => {
     console.log(`EVENT: ${JSON.stringify(event)}`);
+
+
+    const { triggerSource } = event;
+    console.log(`triggerSource => ${ triggerSource }`);
+
     return {
         statusCode: 200,
     //  Uncomment below to enable CORS requests
@@ -31,6 +36,6 @@ exports.handler = async (event) => {
     //      "Access-Control-Allow-Origin": "*",
     //      "Access-Control-Allow-Headers": "*"
     //  },
-        body: JSON.stringify('Hello from Lambda!'),
+        body: JSON.stringify('***** Hello from MFA AuthenticationPostAuth Lambda! *****'),
     };
 };

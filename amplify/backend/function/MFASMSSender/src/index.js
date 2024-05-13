@@ -77,15 +77,12 @@ exports.handler = async (event) => {
     // PlainTextCode now has the decrypted secret.
 
     const { triggerSource } = event;
-    console.log(triggerSource);
+    console.log(`triggerSource => ${ triggerSource }`);
 
     if (triggerSource === 'CustomMessage_SignUp') {
-        // Send email to end-user using custom or 3rd party provider.
-        // Include temporary password in the email.
         console.log('CustomMessage_SignUp: ' + plainTextCode);
     } else if (triggerSource === 'CustomMessage_ResendCode') {
         console.log('CustomMessage_ResendCode: ' + plainTextCode);
-
     } else if (triggerSource === 'CustomMessage_ForgotPassword') {
         console.log('CustomMessage_ForgotPassword: ' + plainTextCode);
 
@@ -102,9 +99,7 @@ exports.handler = async (event) => {
         console.log('CustomMessage_AccountTakeOverNotification: ' + plainTextCode);
     }
 
-    return {};
-
-    /*return {
+    return {
         statusCode: 200,
         //  Uncomment below to enable CORS requests
         //  headers: {
@@ -112,5 +107,5 @@ exports.handler = async (event) => {
         //      "Access-Control-Allow-Headers": "*"
         //  },
         body: JSON.stringify('***** Hello from MFA SMS Custom Sender Lambda *****')
-    };*/
+    };
 };
