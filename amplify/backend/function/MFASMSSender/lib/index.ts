@@ -1,6 +1,6 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
-import b64 from 'base64-js';
-import encryptionSdk from '@aws-crypto/client-node';
+// import b64 from 'base64-js';
+// import encryptionSdk from '@aws-crypto/client-node';
 
 // https://repost.aws/knowledge-center/cognito-custom-email-sender-trigger
 // aws kms create-key --description "KMS Key for CustomEmailSender" --region us-east-1
@@ -73,7 +73,7 @@ export const handler = async (
         }
         // PlainTextCode now has the decrypted secret.*/
 
-        // @ts-ignore
+        // @ts-expect-error need to find type
         const { triggerSource } = event;
         console.log(`triggerSource => ${ triggerSource }`);
 

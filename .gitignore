@@ -34,3 +34,5 @@ amplifyconfiguration*
 /amplify/.config/*
 
 /amplify/backend/function/MFASMSSender/src/index.js
+/amplify/backend/function/MFASMSSender/src/TestRunner.js
+/amplify/backend/function/mfaUploadDocument/src/TestRunner.js

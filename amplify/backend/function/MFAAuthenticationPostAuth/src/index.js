@@ -9,7 +9,7 @@ const { Parameters } = await (new aws.SSM())
     WithDecryption: true,
   })
   .promise();
-
++
 Parameters will be of the form { Name: 'secretName', Value: 'secretValue', ... }[]
 */
 /* Amplify Params - DO NOT EDIT
