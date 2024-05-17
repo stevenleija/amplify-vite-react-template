@@ -5,12 +5,12 @@
     "main" : "../lib/index.ts",
     "license" : "Apache-2.0",
     "devDependencies" : {
-        "@types/aws-lambda" : "^8.10.92",
-        "@types/node" : "^20.12.11",
+        "@types/aws-lambda" : "^8.10.138",
+        "@types/node" : "^20.12.12",
         "typescript" : "^5.4.5"
     },
     "dependencies" : {
-        "aws-sdk" : "~2.1618.0",
+        "aws-sdk" : "~2.1622.0",
         "@aws-crypto/client-node" : "^4.0.0",
         "base64-js" : "^1.5.1"
     }

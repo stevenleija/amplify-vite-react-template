@@ -1,4 +1,4 @@
-import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
+import { APIGatewayProxyResult } from 'aws-lambda';
 // import b64 from 'base64-js';
 // import encryptionSdk from '@aws-crypto/client-node';
 
@@ -38,9 +38,7 @@ try {
 
 const secret = response.SecretString;*/
 
-export const handler = async (
-    event: APIGatewayProxyEvent
-): Promise<APIGatewayProxyResult> => {
+export const handler = async (event): Promise<APIGatewayProxyResult> => {
     console.log(`EVENT: ${ JSON.stringify(event) }`);
 
     try {
@@ -73,7 +71,6 @@ export const handler = async (
         }
         // PlainTextCode now has the decrypted secret.*/
 
-        // @ts-expect-error need to find type
         const { triggerSource } = event;
         console.log(`triggerSource => ${ triggerSource }`);
 
@@ -93,15 +90,17 @@ export const handler = async (
             console.log('CustomMessage_AccountTakeOverNotification: ' + plainTextCode);
         }
 
-        return {
-            statusCode: 200,
-            //  Uncomment below to enable CORS requests
-            //  headers: {
-            //      "Access-Control-Allow-Origin": "*",
-            //      "Access-Control-Allow-Headers": "*"
-            //  },
-            body: JSON.stringify('***** Hello from MFA SMS Custom Sender Lambda *****')
-        };
+        return event;
+
+        /* return {
+             statusCode: 200,
+             //  Uncomment below to enable CORS requests
+             //  headers: {
+             //      "Access-Control-Allow-Origin": "*",
+             //      "Access-Control-Allow-Headers": "*"
+             //  },
+             body: JSON.stringify('***** Hello from MFA SMS Custom Sender Lambda *****')
+         };*/
     } catch (err) {
         console.log(err);
         return {
