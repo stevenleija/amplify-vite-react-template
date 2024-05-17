@@ -33,6 +33,5 @@ amplifyconfiguration*
 /amplify/#current-cloud-backend/*
 /amplify/.config/*
 
-/amplify/backend/function/MFASMSSender/src/index.js
-/amplify/backend/function/MFASMSSender/src/TestRunner.js
-/amplify/backend/function/mfaUploadDocument/src/TestRunner.js
+/amplify/backend/function/MFASMSSender/src/*.js
+/amplify/backend/function/mfaUploadDocument/src/*.js
