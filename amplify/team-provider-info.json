@@ -97,16 +97,25 @@
           "EMAILSUBJECT": "Please confirm account",
           "EMAILMESSAGE": "Please click the following link to confirm",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
-          "s3Key": "amplify-builds/mfademobfc9af66CustomMessage-63754c664f7870366568-build.zip"
+          "s3Key": "amplify-builds/mfademobfc9af66CustomMessage-4e4e4767574f7067356b-build.zip"
         },
         "mfademobfc9af66PostConfirmation": {
           "GROUP": "Standard",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
           "s3Key": "amplify-builds/mfademobfc9af66PostConfirmation-434c30776d722f63784c-build.zip"
         },
-        "mfademoCreateAuthChallenge": {},
-        "mfademoDefineAuthChallenge": {},
-        "mfademoVerifyAuthChallengeResponse": {}
+        "mfademoCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+          "s3Key": "amplify-builds/mfademoCreateAuthChallenge-37736577626b724e7672-build.zip"
+        },
+        "mfademoDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+          "s3Key": "amplify-builds/mfademoDefineAuthChallenge-572f77645a7275706133-build.zip"
+        },
+        "mfademoVerifyAuthChallengeResponse": {
+          "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
+          "s3Key": "amplify-builds/mfademoVerifyAuthChallengeResponse-38424c4568314d345046-build.zip"
+        }
       },
       "api": {
         "mfademo": {}

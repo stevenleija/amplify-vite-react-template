@@ -260,6 +260,54 @@
         }
       ]
     },
+    "AMPLIFY_function_mfademoCreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademoCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademoCreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademoCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademoDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademoDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademoDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademoDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademoVerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademoVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademoVerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademoVerifyAuthChallengeResponse"
+        }
+      ]
+    },
     "AMPLIFY_function_mfademobfc9af66CustomMessage_EMAILMESSAGE": {
       "usedBy": [
         {
