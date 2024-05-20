@@ -14,7 +14,7 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "auth": {
-    "mfademo": {
+    "mfademobfc9af66": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
@@ -39,7 +39,14 @@ export type AmplifyDependentResourcesAttributes = {
       "Name": "string",
       "Region": "string"
     },
-    "mfaUploadDocument": {
+    "mfademobfc9af66CustomMessage": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "mfademobfc9af66PostConfirmation": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",

@@ -29,27 +29,41 @@
     }
   },
   "auth": {
-    "mfademo": {
+    "mfademobfc9af66": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "mfademobfc9af66CustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "mfademobfc9af66PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
-        "mfaConfiguration": "ON",
+        "mfaConfiguration": "OFF",
         "mfaTypes": [
-          "TOTP"
+          "SMS"
         ],
         "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [
-            "REQUIRES_LOWERCASE",
-            "REQUIRES_NUMBERS",
-            "REQUIRES_SYMBOLS",
-            "REQUIRES_UPPERCASE"
-          ],
+          "passwordPolicyCharacters": [],
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "GIVEN_NAME",
+          "EMAIL",
           "FAMILY_NAME",
-          "EMAIL"
+          "GIVEN_NAME"
         ],
         "socialProviders": [],
         "usernameAttributes": [
@@ -75,24 +89,13 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "mfaUploadDocument": {
+    "mfademobfc9af66CustomMessage": {
       "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "mfademo"
-        },
-        {
-          "attributes": [
-            "GraphQLAPIIdOutput"
-          ],
-          "category": "api",
-          "resourceName": "mfademo"
-        }
-      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "mfademobfc9af66PostConfirmation": {
+      "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
@@ -178,6 +181,22 @@
         }
       ]
     },
+    "AMPLIFY_function_MFASMSSender_emailmessage": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_emailsubject": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
     "AMPLIFY_function_MFASMSSender_keyAlias": {
       "usedBy": [
         {
@@ -194,6 +213,30 @@
         }
       ]
     },
+    "AMPLIFY_function_MFASMSSender_modules": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_redirecturl": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_MFASMSSender_resourcename": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MFASMSSender"
+        }
+      ]
+    },
     "AMPLIFY_function_MFASMSSender_s3Key": {
       "usedBy": [
         {
@@ -202,27 +245,67 @@
         }
       ]
     },
-    "AMPLIFY_function_mfaUploadDocument_deploymentBucketName": {
+    "AMPLIFY_function_mfademobfc9af66CustomMessage_EMAILMESSAGE": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "mfaUploadDocument"
+          "resourceName": "mfademobfc9af66CustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_mfaUploadDocument_envvar1": {
+    "AMPLIFY_function_mfademobfc9af66CustomMessage_EMAILSUBJECT": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "mfaUploadDocument"
+          "resourceName": "mfademobfc9af66CustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_mfaUploadDocument_s3Key": {
+    "AMPLIFY_function_mfademobfc9af66CustomMessage_REDIRECTURL": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "mfaUploadDocument"
+          "resourceName": "mfademobfc9af66CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademobfc9af66CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademobfc9af66CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademobfc9af66CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademobfc9af66CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademobfc9af66PostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademobfc9af66PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademobfc9af66PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademobfc9af66PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_mfademobfc9af66PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "mfademobfc9af66PostConfirmation"
         }
       ]
     },

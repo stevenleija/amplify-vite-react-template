@@ -2,39 +2,46 @@
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.12.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
-    "CloudWatchRule": {
+    "GROUP": {
       "Type": "String",
-      "Default": "NONE",
-      "Description": " Schedule Expression"
+      "Default": ""
     },
-    "deploymentBucketName": {
-      "Type": "String"
+    "modules": {
+      "Type": "String",
+      "Default": "",
+      "Description": "Comma-delimited list of modules to be executed by a lambda trigger. Sent to resource as an env variable."
+    },
+    "resourceName": {
+      "Type": "String",
+      "Default": ""
+    },
+    "trigger": {
+      "Type": "String",
+      "Default": "true"
+    },
+    "functionName": {
+      "Type": "String",
+      "Default": ""
+    },
+    "roleName": {
+      "Type": "String",
+      "Default": ""
+    },
+    "parentResource": {
+      "Type": "String",
+      "Default": ""
+    },
+    "parentStack": {
+      "Type": "String",
+      "Default": ""
     },
     "env": {
       "Type": "String"
     },
+    "deploymentBucketName": {
+      "Type": "String"
+    },
     "s3Key": {
-      "Type": "String"
-    },
-    "keyAlias": {
-      "Type": "String"
-    },
-    "keyArn": {
-      "Type": "String"
-    },
-    "emailmessage": {
-      "Type": "String"
-    },
-    "emailsubject": {
-      "Type": "String"
-    },
-    "resourcename": {
-      "Type": "String"
-    },
-    "redirecturl": {
-      "Type": "String"
-    },
-    "modules": {
       "Type": "String"
     }
   },
@@ -56,24 +63,16 @@
         "aws:asset:property": "Code"
       },
       "Properties": {
-        "Code": {
-          "S3Bucket": {
-            "Ref": "deploymentBucketName"
-          },
-          "S3Key": {
-            "Ref": "s3Key"
-          }
-        },
         "Handler": "index.handler",
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "MFASMSSender",
+            "mfademobfc9af66PostConfirmation",
             {
               "Fn::Join": [
                 "",
                 [
-                  "MFASMSSender",
+                  "mfademobfc9af66PostConfirmation",
                   "-",
                   {
                     "Ref": "env"
@@ -88,29 +87,14 @@
             "ENV": {
               "Ref": "env"
             },
+            "MODULES": {
+              "Ref": "modules"
+            },
             "REGION": {
               "Ref": "AWS::Region"
             },
-            "KEY_ALIAS": {
-              "Ref": "keyAlias"
-            },
-            "KEY_ARN": {
-              "Ref": "keyArn"
-            },
-            "EMAILMESSAGE": {
-              "Ref": "emailmessage"
-            },
-            "EMAILSUBJECT": {
-              "Ref": "emailsubject"
-            },
-            "RESOURCENAME": {
-              "Ref": "resourcename"
-            },
-            "REDIRECTURL": {
-              "Ref": "redirecturl"
-            },
-            "MODULES": {
-              "Ref": "modules"
+            "GROUP": {
+              "Ref": "GROUP"
             }
           }
         },
@@ -120,9 +104,16 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs20.x",
-        "Layers": [],
-        "Timeout": 25
+        "Runtime": "nodejs18.x",
+        "Timeout": 25,
+        "Code": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": {
+            "Ref": "s3Key"
+          }
+        }
       }
     },
     "LambdaExecutionRole": {
@@ -131,12 +122,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "mfademoLambdaRole5f2b1e52",
+            "mfademobfc9af66PostConfirmation",
             {
               "Fn::Join": [
                 "",
                 [
-                  "mfademoLambdaRole5f2b1e52",
+                  "mfademobfc9af66PostConfirmation",
                   "-",
                   {
                     "Ref": "env"
@@ -222,11 +213,6 @@
         ]
       }
     },
-    "Region": {
-      "Value": {
-        "Ref": "AWS::Region"
-      }
-    },
     "LambdaExecutionRole": {
       "Value": {
         "Ref": "LambdaExecutionRole"
@@ -238,6 +224,11 @@
           "LambdaExecutionRole",
           "Arn"
         ]
+      }
+    },
+    "Region": {
+      "Value": {
+        "Ref": "AWS::Region"
       }
     }
   }

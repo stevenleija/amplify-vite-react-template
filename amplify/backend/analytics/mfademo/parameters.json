@@ -1,11 +1,11 @@
 {
   "appName": "mfademo",
-  "roleName": "pinpointLambdaRole86cca003",
-  "cloudformationPolicyName": "cloudformationPolicy86cca003",
-  "cloudWatchPolicyName": "cloudWatchPolicy86cca003",
-  "pinpointPolicyName": "pinpointPolicy86cca003",
-  "authPolicyName": "pinpoint_amplify_86cca003",
-  "unauthPolicyName": "pinpoint_amplify_86cca003",
+  "roleName": "pinpointLambdaRole9bbc02f9",
+  "cloudformationPolicyName": "cloudformationPolicy9bbc02f9",
+  "cloudWatchPolicyName": "cloudWatchPolicy9bbc02f9",
+  "pinpointPolicyName": "pinpointPolicy9bbc02f9",
+  "authPolicyName": "pinpoint_amplify_9bbc02f9",
+  "unauthPolicyName": "pinpoint_amplify_9bbc02f9",
   "authRoleName": {
     "Ref": "AuthRoleName"
   },
@@ -18,5 +18,5 @@
       "Arn"
     ]
   },
-  "pinpointInAppMessagingPolicyName": "pinpointInAppMessagingPolicyName86cca003"
+  "pinpointInAppMessagingPolicyName": "pinpointInAppMessagingPolicyName9bbc02f9"
 }

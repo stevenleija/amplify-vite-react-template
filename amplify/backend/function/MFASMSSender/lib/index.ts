@@ -1,4 +1,4 @@
-import { APIGatewayProxyResult } from 'aws-lambda';
+import { Context, APIGatewayProxyResult, Handler } from 'aws-lambda';
 // import b64 from 'base64-js';
 // import encryptionSdk from '@aws-crypto/client-node';
 
@@ -38,8 +38,9 @@ try {
 
 const secret = response.SecretString;*/
 
-export const handler = async (event): Promise<APIGatewayProxyResult> => {
+export const handler: Handler = async (event, context:Context): Promise<APIGatewayProxyResult> => {
     console.log(`EVENT: ${ JSON.stringify(event) }`);
+    console.log(`CONTEXT: ${ JSON.stringify(context) }`);
 
     try {
         let plainTextCode: string | Buffer;
@@ -74,7 +75,53 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
         const { triggerSource } = event;
         console.log(`triggerSource => ${ triggerSource }`);
 
-        if (triggerSource === 'CustomMessage_SignUp') {
+        if (event.triggerSource === 'CustomMessage_Authentication') {
+            const { codeParameter } = event.request;
+            const {
+                region,
+                userName
+            } = event;
+            const { clientId } = event.callerContext;
+            const redirectUrl = `${ process.env.REDIRECTURL }/?username=${ userName }`;
+            const resourcePrefix = process.env.RESOURCENAME.split('CustomMessage')[0];
+
+            const hyphenRegions = [
+                'us-east-1',
+                'us-west-1',
+                'us-west-2',
+                'ap-southeast-1',
+                'ap-southeast-2',
+                'ap-northeast-1',
+                'eu-west-1',
+                'sa-east-1'
+            ];
+
+            const separator = hyphenRegions.includes(region) ? '-' : '.';
+
+            console.log(`userName: ${ userName }`);
+            console.log(`redirectUrl: ${ redirectUrl }`);
+            console.log(`region: ${ region }`);
+            console.log(`clientId: ${ clientId }`);
+
+            const payload = Buffer.from(
+                JSON.stringify({
+                    userName,
+                    redirectUrl,
+                    region,
+                    clientId
+                })
+            ).toString('base64');
+
+            const bucketUrl = `http://${ resourcePrefix }verificationbucket-${ process.env.ENV }.s3-website${ separator }${ region }.amazonaws.com`;
+            const url = `${ bucketUrl }/?data=${ payload }&code=${ codeParameter }`;
+            const message = `${ process.env.EMAILMESSAGE }. \n ${ url }`;
+            event.response.smsMessage = message;
+            event.response.emailSubject = process.env.EMAILSUBJECT;
+            event.response.emailMessage = message;
+
+            console.log(`event.response,  ${ JSON.stringify(event.response) }`);
+        }
+        else if (triggerSource === 'CustomMessage_SignUp') {
             console.log('CustomMessage_SignUp: ' + plainTextCode);
         } else if (triggerSource === 'CustomMessage_ResendCode') {
             console.log('CustomMessage_ResendCode: ' + plainTextCode);
