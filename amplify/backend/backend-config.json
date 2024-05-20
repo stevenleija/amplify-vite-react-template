@@ -89,6 +89,21 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
+    "mfademoCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "mfademoDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "mfademoVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "mfademobfc9af66CustomMessage": {
       "build": true,
       "providerPlugin": "awscloudformation",

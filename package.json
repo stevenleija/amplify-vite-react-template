@@ -8,8 +8,11 @@
         "build": "tsc && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
+        "amplify:mfademoCreateAuthChallenge": "cd amplify/backend/function/mfademoCreateAuthChallenge && tsc -p ./tsconfig.json && cd -",
+        "amplify:mfademoDefineAuthChallenge": "cd amplify/backend/function/mfademoDefineAuthChallenge && tsc -p ./tsconfig.json && cd -",
+        "amplify:mfademoVerifyAuthChallengeResponse": "cd amplify/backend/function/mfademoVerifyAuthChallengeResponse && tsc -p ./tsconfig.json && cd -",
         "aaamplify:MFAAuthenticationPostAuth": "cd amplify/backend/function/MFAAuthenticationPostAuth && tsc -p ./tsconfig.json && cd -",
-        "amplify:MFASMSSender": "cd amplify/backend/function/MFASMSSender && tsc -p ./tsconfig.json && cd -",
+        "aaaamplify:MFASMSSender": "cd amplify/backend/function/MFASMSSender && tsc -p ./tsconfig.json && cd -",
         "aaamplify:mfaUploadDocument": "cd amplify/backend/function/mfaUploadDocument && tsc -p ./tsconfig.json && cd -"
     },
     "dependencies": {

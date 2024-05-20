@@ -103,7 +103,10 @@
           "GROUP": "Standard",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
           "s3Key": "amplify-builds/mfademobfc9af66PostConfirmation-434c30776d722f63784c-build.zip"
-        }
+        },
+        "mfademoCreateAuthChallenge": {},
+        "mfademoDefineAuthChallenge": {},
+        "mfademoVerifyAuthChallengeResponse": {}
       },
       "api": {
         "mfademo": {}

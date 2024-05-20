@@ -35,3 +35,6 @@ amplifyconfiguration*
 
 /amplify/backend/function/MFASMSSender/src/*.js
 /amplify/backend/function/mfaUploadDocument/src/*.js
+/amplify/backend/function/mfademoVerifyAuthChallengeResponse/src/*.js
+/amplify/backend/function/mfademoCreateAuthChallenge/src/*.js
+/amplify/backend/function/mfademoDefineAuthChallenge/src/*.js
