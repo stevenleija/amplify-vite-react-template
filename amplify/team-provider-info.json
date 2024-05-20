@@ -94,8 +94,8 @@
         },
         "mfademobfc9af66CustomMessage": {
           "REDIRECTURL": "https://main.dspvsx59t8i0j.amplifyapp.com/",
-          "EMAILSUBJECT": "Confirmation for MFA Demo",
-          "EMAILMESSAGE": "Please click",
+          "EMAILSUBJECT": "Please confirm account",
+          "EMAILMESSAGE": "Please click the following link to confirm",
           "deploymentBucketName": "amplify-mfademo-dev-cd1d5-deployment",
           "s3Key": "amplify-builds/mfademobfc9af66CustomMessage-63754c664f7870366568-build.zip"
         },

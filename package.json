@@ -10,13 +10,14 @@
         "preview": "vite preview",
         "aaamplify:MFAAuthenticationPostAuth": "cd amplify/backend/function/MFAAuthenticationPostAuth && tsc -p ./tsconfig.json && cd -",
         "amplify:MFASMSSender": "cd amplify/backend/function/MFASMSSender && tsc -p ./tsconfig.json && cd -",
-        "amplify:mfaUploadDocument": "cd amplify/backend/function/mfaUploadDocument && tsc -p ./tsconfig.json && cd -"
+        "aaamplify:mfaUploadDocument": "cd amplify/backend/function/mfaUploadDocument && tsc -p ./tsconfig.json && cd -"
     },
     "dependencies": {
         "@aws-amplify/ui-react": "^6.1.11",
-        "@aws-crypto/client-node" : "~4.0.0",
+        "@aws-crypto/client-node": "~4.0.0",
         "aws-amplify": "^6.3.2",
         "aws-sdk": "^2.1623.0",
+        "crypto-secure-random-digit": "^1.0.10",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     },
